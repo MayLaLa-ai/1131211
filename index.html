@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>線上測驗系統</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>線上測驗系統</h1>
+        </header>
+
+        <main>
+            <!-- 題目區域 -->
+            <div id="questionBox">
+                <div class="question-content">
+                    <h2 id="questionText"></h2>
+                    <div id="optionsBox" class="options-container"></div>
+                </div>
+            </div>
+
+            <!-- 導航按鈕 -->
+            <div class="navigation">
+                <button id="prevBtn">上一題</button>
+                <span id="questionNumber"></span>
+                <button id="nextBtn">下一題</button>
+            </div>
+
+            <!-- 提交按鈕 -->
+            <div class="submit-container">
+                <button id="submitBtn" style="display: none;">提交答案</button>
+            </div>
+        </main>
+
+        <!-- 結果顯示 -->
+        <div id="resultBox" style="display: none;">
+            <div class="result-content">
+                <h2>測驗結果</h2>
+                <div class="score-display">
+                    <span id="scoreNumber">0</span>
+                    <span class="score-text">分</span>
+                </div>
+                <p id="feedback"></p>
+                <button id="restartBtn">重新測驗</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
